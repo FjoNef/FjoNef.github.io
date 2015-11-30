@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./css/bootstrap.css" rel="stylesheet">
+	<link href="./css/styles.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	<script src="./js/code.js"></script>
+	<title>Hotexchange.net</title>
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<img src="./logo.png">
+			<div class="pull-right" id="nameCont">
+				<span class="glyphicon glyphicon-ok-sign"></span> WMID 123456789012 
+				<button type="button" class="btn btn-default">Выход</button>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<h1 class="h1"> История заказов </h1>
+				</div>
+				<div class="col-md-4">
+					<p id="mail">
+					<a href="mailto:mail.hotexchange@gmail.com"> <span class="glyphicon glyphicon-envelope"></span> mail.hotexchange@gmail.com</a><br>
+					WMID:<b>452744119083</b>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container mainTable">
+		<div class="row" id="formInline">
+			<div class="col-md-6">
+			<p class="h4">WMID <b>123456789012</b></p>
+			</div>
+			<div class="col-md-6">
+			<form class="form-inline" role="form">
+			    <button class="btn btn-link">Все кошельки <span class="caret"></span></button>
+			    <button class="btn btn-link">Все карты <span class="caret"></span></button>
+			  <div class="form-group">
+			    <label class="sr-only" for="inputSearch">Пароль</label>
+			    <input type="text" class="form-control" id="inputSearch" placeholder="ID заказа, дата, сумма">
+			  </div>
+			</form>
+			</div>
+		</div>
+		<div class="table-responsive">
+		<table class="table">
+			<thead>
+				<tr>
+					<th><a href="#">ID заказа <span class="glyphicon glyphicon-arrow-down"></span></a></th>
+					<th><a href="#">Кошелек <span class="glyphicon glyphicon-arrow-down"></span></a></th>
+					<th><a href="#">Карта <span class="glyphicon glyphicon-arrow-down"></span></a></th>
+					<th><a href="#">Дата и время <span class="glyphicon glyphicon-arrow-down"></span></a></th>
+					<th><a href="#">Статус <span class="glyphicon glyphicon-arrow-down"></span></a></th>
+					<th><a href="#">Сумма к обмену <span class="glyphicon glyphicon-arrow-down"></span></a></th>
+					<th><a href="#">Поступило <span class="glyphicon glyphicon-arrow-down"></span></a></th>
+					<th><a href="#">Комиссия <span class="glyphicon glyphicon-arrow-down"></span></a></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>AB000000</td>
+					<td>Z123455678901</td>
+					<td>...0076, $</td>
+					<td>11.11.15 13:35</td>
+					<td><span class="glyphicon glyphicon-ok-sign"></span> Выполнен</td>
+					<td>$ 20 000.00</td>
+					<td>$ 19 800.00</td>
+					<td>$ 200.00</td>
+					<td><button type="button" class="btn btn-default">Повторить</button></td>
+				</tr>
+				<tr>
+					<td>AB000000</td>
+					<td>Z123455678901</td>
+					<td>...0076, $</td>
+					<td>11.11.15 13:35</td>
+					<td><span class="glyphicon glyphicon-ok-sign"></span> Выполнен</td>
+					<td>$ 20 000.00</td>
+					<td>$ 19 800.00</td>
+					<td>$ 200.00</td>
+					<td><button type="button" class="btn btn-default">Повторить</button></td>
+				</tr>
+				<tr>
+					<td>AB000000</td>
+					<td>Z123455678901</td>
+					<td>...0076, $</td>
+					<td>11.11.15 13:35</td>
+					<td><span class="glyphicon glyphicon-ok-sign"></span> Выполнен</td>
+					<td>$ 20 000.00</td>
+					<td>$ 19 800.00</td>
+					<td>$ 200.00</td>
+					<td><button type="button" class="btn btn-default">Повторить</button></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="container">
+			<a href="#">Уведомление об ответственности</a>
+			<a href="#">Соглашение о предоставлении услуг</a>
+		</div>
+	</div>
+
+</body>
+</html>

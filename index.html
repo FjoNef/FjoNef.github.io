@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="./css/bootstrap.css" rel="stylesheet">
+	<link href="./css/styles.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="./js/bootstrap.js"></script>
+	<script src="./js/code.js"></script>
+	<title>Hotexchange.net</title>
+</head>
+<body>
+	<div class="container" id="site">
+		<div id="header">
+			<div class="container">
+				<img src="./logo.png">
+				<button type="button" onclick="location.href='./table.html'" class="btn btn-default pull-right">Вход</button>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<h1 class="h1"> Обмен WebMoney </h1>
+					</div>
+					<div class="col-md-4">
+						<p id="mail">
+						<a href="mailto:mail.hotexchange@gmail.com"> <span class="glyphicon glyphicon-envelope"></span> mail.hotexchange@gmail.com</a><br>
+						WMID:<b>452744119083</b>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="mainContainer">
+			<div class="row">
+				<div class="col-md-7" id="form">
+					<form class="form-horizontal" role="form" id="rowForm">
+						<div class="form-group">
+						    <label for="inputPay" class="col-sm-4 control-label">Отдаёте <p class="info">max 20000 WMZ</p></label>
+						    <div class="col-sm-2">
+						      <input type="text" class="form-control" id="inputPay" placeholder="20000">
+						    </div>
+						    <div class="col-sm-6">
+						    	<button class="btn btn-link">WMZ <span class="caret"></span></button>
+						    </div>
+					  	</div>
+					  	<div class="form-group">
+						    <label for="inputTake" class="col-sm-4 control-label">Получаете <p class="info">max 30000 USD</p></label>
+						    <div class="col-sm-2">
+						      <input type="text" class="form-control" id="inputTake" placeholder="19980">
+						    </div>
+						    <div class="col-sm-6">
+						    	<button class="btn btn-link">MasterCard Epayments USD <span class="caret"></span></button>
+						    </div>
+					  	</div>
+					  	<div class="form-group">
+						    <label for="inputTax" class="col-sm-4 control-label">Комиссия <p class="info">1%, min 5 WMZ</p></label>
+						    <div class="col-sm-2">
+						      <input type="text" disabled class="form-control colored" id="inputTax" value="5 WMZ">
+						    </div>
+					  	</div>
+					  	<br>
+					  	<div class="form-group">
+						    <label for="inputName" class="col-sm-4 control-label" >Имя и фамилия <p class="info">как на карте</p></label>
+						    <div class="col-sm-8">
+						      <input type="text" class="form-control" id="inputName" data-toggle="popover" data-placement="right" data-content="Имя и номер карты не соответствуют">
+						    </div>
+					  	</div>
+					  	<div class="form-group">
+						    <label for="inputCard" class="col-sm-4 control-label">Номер карты <p class="info">MasterCard EUR</p></label>
+						    <div class="col-sm-8">
+						      <input type="text" class="form-control" id="inputCard">
+						    </div>
+					  	</div>
+					  	<div class="form-group">
+						    <label for="inputWMID" class="col-sm-4 control-label">WMID <p class="info">только цифры</p></label>
+						    <div class="col-sm-8">
+						      <input type="text" class="form-control" id="inputWMID">
+						    </div>
+					  	</div>
+					  	<div class="form-group">
+						    <label for="inputEmail" class="col-sm-4 control-label">Email</label>
+						    <div class="col-sm-8">
+						      <input type="email" class="form-control" id="inputEmail">
+						    </div>
+					  	</div>
+					  	<br>
+					  	<div class="form-group">
+						    <div class="col-sm-offset-4 col-sm-8">
+						      <div class="checkbox">
+						        <label>
+						          <input type="checkbox">Согласен с <a href="#">условиями предоставления услуг</a>
+						        </label>
+						      </div>
+						    </div>
+  						</div>
+  						<div class="form-group">
+						    <div class="col-sm-offset-4 col-sm-8">
+						      <button type="button" onclick="error()" class="btn btn-primary btn-lg" id="submitButton">Обменять за 5 минут</button>
+						    </div>
+  						</div>
+					</form>
+				</div>
+				<div class="col-md-5" id="help">
+					<div class="container" id="helpCont">
+						<div class="container warning">
+							<p>Извините!<br>Сейчас мы <strong>не можем пополнить</strong> вашу карту из-за технических работ.</p>
+							<p class="warning-text">Попробуйте еще раз через 2 часа.</p>
+						</div>
+						<p><b>Как пользоваться сервисом</b><br><br>
+						1. Введите в поле "Получаете" сумму, которая будет списана с вашего кошелька.<br><br>
+						2. В поле "Получаете" появится сумма, которая будет переведена на карту в результате обмена (можно сразу ввести нужную сумму в поле "Получаете").<br><br>
+						3. Прочитайте <a href="#">условия предоставления услуг</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="container">
+				<a href="#">Уведомление об ответственности</a>
+				<a href="#">Соглашение о предоставлении услуг</a>
+			</div>
+		</div>
+		</div>
+</body>
+</html>
