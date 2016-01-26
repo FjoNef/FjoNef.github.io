@@ -1,3 +1,3 @@
 function error(){
-	$('#inputName').popover('show');
+	$('#input-name, #input-email, #checkbox').popover('show');
 }

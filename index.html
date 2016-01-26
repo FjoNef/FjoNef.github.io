@@ -34,60 +34,60 @@
 		</div>
 		<div class="container" id="mainContainer">
 			<div class="row">
-				<div class="col-md-7" id="form">
+				<div class="col-md-7 container-form">
 					<form class="form-horizontal" role="form" id="rowForm">
 						<div class="form-group">
-						    <label for="inputPay" class="col-sm-4 control-label">Отдаёте <p class="info">max 20000 WMZ</p></label>
+						    <label for="inputPay" class="col-sm-3 control-label">Отдаёте <p class="info">max 20000 WMZ</p></label>
 						    <div class="col-sm-2">
-						      <input type="text" class="form-control" id="inputPay" placeholder="20000">
+						      <input type="text" class="form-control main-number" id="inputPay" placeholder="20000">
 						    </div>
 						    <div class="col-sm-6">
 						    	<button class="btn btn-link">WMZ <span class="caret"></span></button>
 						    </div>
 					  	</div>
 					  	<div class="form-group">
-						    <label for="inputTake" class="col-sm-4 control-label">Получаете <p class="info">max 30000 USD</p></label>
+						    <label for="inputTake" class="col-sm-3 control-label">Получаете <p class="info">max 30000 USD</p></label>
 						    <div class="col-sm-2">
-						      <input type="text" class="form-control" id="inputTake" placeholder="19980">
+						      <input type="text" class="form-control main-number" id="inputTake" placeholder="19980">
 						    </div>
 						    <div class="col-sm-6">
 						    	<button class="btn btn-link">MasterCard Epayments USD <span class="caret"></span></button>
 						    </div>
 					  	</div>
 					  	<div class="form-group">
-						    <label for="inputTax" class="col-sm-4 control-label">Комиссия <p class="info">1%, min 5 WMZ</p></label>
+						    <label for="inputTax" class="col-sm-3 control-label">Комиссия <p class="info">1%, min 5 WMZ</p></label>
 						    <div class="col-sm-2">
-						      <input type="text" disabled class="form-control colored" id="inputTax" value="5 WMZ">
+						      <input type="text" disabled class="form-control colored main-number" id="inputTax" value="5 WMZ">
 						    </div>
 					  	</div>
 					  	<br>
 					  	<div class="form-group">
-						    <label for="inputName" class="col-sm-4 control-label" >Имя и фамилия <p class="info">как на карте</p></label>
-						    <div class="col-sm-8">
-						      <input type="text" class="form-control" id="inputName" data-toggle="popover" data-placement="right" data-content="Имя и номер карты не соответствуют">
+						    <label for="inputName" class="col-sm-3 control-label" >Имя и фамилия <p class="info">как на карте</p></label>
+						    <div class="col-sm-8" id="input-name" data-toggle="popover" data-placement="right" data-html="true" data-content="<div class='alert'>Имя и номер карты не соответствуют</div>">
+						      <input type="text" class="form-control main-form" id="inputName">
 						    </div>
 					  	</div>
 					  	<div class="form-group">
-						    <label for="inputCard" class="col-sm-4 control-label">Номер карты <p class="info">MasterCard EUR</p></label>
+						    <label for="inputCard" class="col-sm-3 control-label">Номер карты <p class="info">MasterCard EUR</p></label>
 						    <div class="col-sm-8">
-						      <input type="text" class="form-control" id="inputCard">
+						      <input type="text" class="form-control main-form" id="inputCard">
 						    </div>
 					  	</div>
 					  	<div class="form-group">
-						    <label for="inputWMID" class="col-sm-4 control-label">WMID <p class="info">только цифры</p></label>
+						    <label for="inputWMID" class="col-sm-3 control-label">WMID <p class="info">только цифры</p></label>
 						    <div class="col-sm-8">
-						      <input type="text" class="form-control" id="inputWMID">
+						      <input type="text" class="form-control main-form" id="inputWMID">
 						    </div>
 					  	</div>
 					  	<div class="form-group">
-						    <label for="inputEmail" class="col-sm-4 control-label">Email</label>
-						    <div class="col-sm-8">
-						      <input type="email" class="form-control" id="inputEmail">
+						    <label for="inputEmail" class="col-sm-3 control-label" >Email</label>
+						    <div class="col-sm-8" id="input-email" data-toggle="popover" data-placement="right" data-html="true" data-content="<div class='alert'>Такой email не существует</div>">
+						      <input type="email" class="form-control main-form" id="inputEmail">
 						    </div>
 					  	</div>
 					  	<br>
 					  	<div class="form-group">
-						    <div class="col-sm-offset-4 col-sm-8">
+						    <div class="col-sm-offset-3 col-sm-8" id="checkbox" data-toggle="popover" data-placement="right" data-html="true" data-content="<div class='alert'>Прочитайте условия и поставьте галочку</div>">
 						      <div class="checkbox">
 						        <label>
 						          <input type="checkbox">Согласен с <a href="#">условиями предоставления услуг</a>
@@ -96,23 +96,25 @@
 						    </div>
   						</div>
   						<div class="form-group">
-						    <div class="col-sm-offset-4 col-sm-8">
+						    <div class="col-sm-offset-3 col-sm-8">
 						      <button type="button" onclick="error()" class="btn btn-primary btn-lg" id="submitButton">Обменять за 5 минут</button>
 						    </div>
   						</div>
 					</form>
 				</div>
 				<div class="col-md-5" id="help">
-					<div class="container" id="helpCont">
-						<div class="container warning">
+					<div id="helpCont">
+						<div class="warning">
 							<p>Извините!<br>Сейчас мы <strong>не можем пополнить</strong> вашу карту из-за технических работ.</p>
 							<p class="warning-text">Попробуйте еще раз через 2 часа.</p>
 						</div>
-						<p><b>Как пользоваться сервисом</b><br><br>
-						1. Введите в поле "Получаете" сумму, которая будет списана с вашего кошелька.<br><br>
-						2. В поле "Получаете" появится сумма, которая будет переведена на карту в результате обмена (можно сразу ввести нужную сумму в поле "Получаете").<br><br>
-						3. Прочитайте <a href="#">условия предоставления услуг</a>.
-						</p>
+						<div class="help-padding">
+							<p><b>Как пользоваться сервисом</b><br><br>
+							1. Введите в поле "Получаете" сумму, которая будет списана с вашего кошелька.<br><br>
+							2. В поле "Получаете" появится сумма, которая будет переведена на карту в результате обмена (можно сразу ввести нужную сумму в поле "Получаете").<br><br>
+							3. Прочитайте <a href="#">условия предоставления услуг</a>.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
